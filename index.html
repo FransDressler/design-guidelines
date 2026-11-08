@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design-Guidelines – Websites, die nicht nach KI aussehen</title>
+<meta name="description" content="Regeln, Farbpaletten, Layout-Messungen und getunte shadcn-Komponenten für Websites, die nicht generisch wirken.">
+<style>
+:root{--ink:#16150f;--paper:#f4f1ea;--muted:#6b675c;--accent:#c2410c;--line:#d8d3c6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:clamp(20px,5vw,64px)}
+.label{font:500 11px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+h1{font:600 clamp(36px,7vw,72px)/.95 Georgia,serif;letter-spacing:-.02em;margin:16px 0 20px;max-width:14ch}
+.lead{max-width:44ch;color:var(--muted);font-size:18px}
+ol{list-style:none;padding:0;margin:56px 0 0;border-top:1px solid var(--ink)}
+li{border-bottom:1px solid var(--line)}
+li a{display:grid;grid-template-columns:3ch 1fr auto;gap:16px;align-items:baseline;padding:18px 0;color:inherit;text-decoration:none;min-height:44px}
+li a:hover b{color:var(--accent)}
+b{font:600 clamp(18px,3vw,24px)/1.2 ui-sans-serif,system-ui;transition:color .15s}
+small{color:var(--muted);font-size:14px}
+.n{font:500 12px ui-monospace,monospace;color:var(--muted)}
+footer{margin-top:64px;font-size:13px;color:var(--muted)}
+footer a{color:inherit}
+@media (max-width:640px){li a{grid-template-columns:3ch 1fr}li a small{grid-column:2}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <span class="label">Arbeitsmappe · Stand Nov 2026</span>
+  <h1>Websites, die nicht nach Template aussehen.</h1>
+  <p class="lead">Was KI-generierte Seiten verrät, wie Profis Größen und Farben setzen – gemessen an echten Seiten, umgesetzt in Komponenten.</p>
+  <ol>
+    <li><a href="lab/"><span class="n">01</span><b>shadcn/ui: Standard vs. getunt</b><small>Live, 3 Paletten</small></a></li>
+    <li><a href="components.html"><span class="n">02</span><b>Blanko-Komponenten</b><small>HTML/CSS, 3 Themes</small></a></li>
+    <li><a href="https://github.com/FransDressler/design-guidelines/blob/main/layout-analysis.md"><span class="n">03</span><b>Layout-Analyse mit Messwerten</b><small>11 Seiten vermessen</small></a></li>
+    <li><a href="https://github.com/FransDressler/design-guidelines/blob/main/palettes.md"><span class="n">04</span><b>Farbpaletten &amp; Psychologie</b><small>mit WCAG-Kontrast</small></a></li>
+    <li><a href="https://github.com/FransDressler/design-guidelines/blob/main/GUIDELINES.md"><span class="n">05</span><b>Guidelines</b><small>Verhalten, Hierarchie, Anti-KI-Liste</small></a></li>
+    <li><a href="https://github.com/FransDressler/design-guidelines/blob/main/research-designers.md"><span class="n">06</span><b>Recherche: Designer-Websites &amp; Workflows</b><small>Videos zusammengefasst</small></a></li>
+  </ol>
+  <footer>Quellcode: <a href="https://github.com/FransDressler/design-guidelines">GitHub</a></footer>
+</main>
+</body>
+</html>
