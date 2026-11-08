@@ -107,6 +107,11 @@ const palettes = ['crumbz', 'zyorex', 'pelmatech'] as const
 export default function App() {
   const [p, setP] = useState<(typeof palettes)[number]>('crumbz')
   return (
+    <>
+    <header className="border-b px-6 py-5 md:px-12">
+      <h1 className="text-xl font-semibold tracking-tight md:text-2xl">shadcn/ui: Original gegen getunt</h1>
+      <p className="mt-1 max-w-[60ch] text-sm text-muted-foreground">Links die Komponenten so, wie <code>shadcn add</code> sie liefert. Rechts dieselben Komponenten mit eigener Schrift, klarem Größensprung, Tabellenziffern und Markenpalette. <a className="underline underline-offset-4" href="../">Zurück zur Übersicht</a></p>
+    </header>
     <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
       <div className="border-b p-5 sm:p-8 md:border-b-0 md:border-r lg:p-12">
         <p className="mb-8 font-mono text-xs text-muted-foreground">A — shadcn/ui out of the box (base-nova, neutral)</p>
@@ -124,5 +129,6 @@ export default function App() {
         <Tuned />
       </div>
     </div>
+    </>
   )
 }

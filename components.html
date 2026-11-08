@@ -3,7 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blank Components — non-generic</title>
+<title>Blanko-Komponenten, die nicht generisch wirken</title>
+<meta name="description" content="Hero, Navigation, Preistabelle, Formular und Zustände als HTML/CSS-Vorlage mit drei Paletten – linksbündig, asymmetrisch, ohne KI-Look.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/components.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blanko-Komponenten, die nicht generisch wirken">
+<meta property="og:description" content="Hero, Navigation, Preistabelle, Formular und Zustände als HTML/CSS-Vorlage mit drei Paletten – linksbündig, asymmetrisch, ohne KI-Look.">
+<meta property="og:url" content="https://fransdressler.github.io/design-guidelines/components.html">
+<meta property="og:image" content="https://fransdressler.github.io/design-guidelines/shots/lab-crumbz.png">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -85,7 +94,7 @@ input,select{width:100%;font:16px var(--sans);padding:10px 12px;border:1px solid
 .states{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
 .state{padding:28px;border-right:1px solid var(--line);min-height:180px;display:flex;flex-direction:column;gap:12px}
 .state:last-child{border:0}
-.state h4{font:600 16px var(--sans)}
+.state h3{font:600 16px var(--sans)}
 .state p{color:var(--muted);font-size:14px}
 .bar{height:10px;background:var(--line);border-radius:2px;animation:p 1.4s ease-in-out infinite}
 @keyframes p{50%{opacity:.5}}
@@ -188,9 +197,9 @@ footer.site p{color:var(--muted);max-width:40ch}
   <section class="specimen">
     <span class="label">05 — Leer · Laden · Erfolg</span>
     <div class="states">
-      <div class="state"><h4>Noch keine Einträge</h4><p>Erklärt, warum es leer ist und was der erste Schritt ist.</p><a class="link" href="#">Ersten Eintrag anlegen</a></div>
+      <div class="state"><h3>Noch keine Einträge</h3><p>Erklärt, warum es leer ist und was der erste Schritt ist.</p><a class="link" href="#">Ersten Eintrag anlegen</a></div>
       <div class="state" aria-busy="true"><span class="label">Lädt …</span><div class="bar" style="width:80%"></div><div class="bar" style="width:55%"></div><div class="bar" style="width:68%"></div></div>
-      <div class="state"><h4>Gespeichert</h4><p class="toast">Rechnung #— wurde an name@firma.de gesendet.</p><a class="link" href="#">Rückgängig</a></div>
+      <div class="state"><h3>Gespeichert</h3><p class="toast">Rechnung #— wurde an name@firma.de gesendet.</p><a class="link" href="#">Rückgängig</a></div>
     </div>
   </section>
 
