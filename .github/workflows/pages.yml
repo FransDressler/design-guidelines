@@ -25,7 +25,8 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site/lab
-          cp index.html sitemap.xml components.html *.md _site/
+          cp index.html generator.html robots.txt sitemap.xml components.html *.md _site/
+          cp -r docs layouts tokens motion skeletons stickers seo _site/
           cp -r shots _site/
           cp -r shadcn-lab/dist/* _site/lab/
           touch _site/.nojekyll

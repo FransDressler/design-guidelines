@@ -1,0 +1,1 @@
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"{{Start}}","item":"{{https://domain.de/}}"},{"@type":"ListItem","position":2,"name":"{{Seite}}","item":"{{https://domain.de/seite}}"}]}

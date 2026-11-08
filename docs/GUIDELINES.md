@@ -42,7 +42,7 @@ Hierarchie in genau dieser Reihenfolge der Mittel (das stärkste zuerst):
 - [ ] Keine Badge-Pill mit ✨ über der H1
 - [ ] Kein 3-Spalten-Icon-Grid als Feature-Sektion
 - [ ] Kein „Most Popular“-Pricing-Schema aus drei Karten, sofern es nicht wirklich passt
-- [ ] Keine Buzzwords: unlock, seamless, supercharge, elevate, revolutionize, effortless
+- [ ] Keine Buzzwords: unlock, seamless, supercharge, elevate, revolutionize, effortless <!-- lint-ok -->
 - [ ] Keine erfundenen Zahlen und Testimonials
 - [ ] Nicht alles zentrieren, nicht jede Sektion gleich hoch
 - [ ] Kein `rounded-2xl` + `shadow-lg` auf allem, keine Karten in Karten

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de" data-palette="paper" data-type="editorial" data-radius="crisp" data-density="regular" data-motion="calm" data-skeleton="pixel" data-stickers="stamp" data-grain="on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hollmann Architekten – Umbauten im Bestand, Lübeck</title>
+<meta name="description" content="Wir bauen um, was schon steht: Speicher, Schulen, Wohnhäuser aus den 50ern. 41 Projekte seit 2011, alle in Schleswig-Holstein.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/layouts/editorial.html">
+<meta property="og:title" content="Hollmann Architekten – Umbauten im Bestand">
+<meta property="og:description" content="41 Umbauten seit 2011, alle in Schleswig-Holstein.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fransdressler.github.io/design-guidelines/layouts/editorial.html">
+<meta property="og:image" content="https://picsum.photos/seed/hollmann/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../tokens/base.css">
+<link rel="stylesheet" href="layouts.css">
+<link rel="stylesheet" href="../motion/motion.css">
+<link rel="stylesheet" href="../skeletons/skeletons.css">
+<link rel="stylesheet" href="../stickers/stickers.css">
+<script src="../tokens/fonts.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Hollmann Architekten","address":{"@type":"PostalAddress","addressLocality":"Lübeck","addressCountry":"DE"},"url":"https://fransdressler.github.io/design-guidelines/layouts/editorial.html"}</script>
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="#">Hollmann</a>
+  <nav aria-label="Hauptmenü"><a href="#projekte" aria-current="page">Projekte</a><a href="#haltung">Haltung</a><a href="#buero">Büro</a><a href="#kontakt">Kontakt</a></nav>
+</header>
+
+<main>
+  <section class="wrap ed-hero grid12">
+    <h1 data-split>Wir bauen um, was schon&nbsp;steht.</h1>
+    <p class="meta label" data-reveal>Lübeck · seit 2011 · 41 Umbauten</p>
+    <p class="lead muted" data-reveal="up">Speicher, Schulen, Wohnhäuser aus den 50ern. Abreißen ist fast immer teurer, als es aussieht – wir rechnen es Ihnen vor, bevor wir zeichnen.</p>
+  </section>
+
+  <section class="wrap" aria-label="Titelprojekt">
+    <figure class="media" style="aspect-ratio:21/9;margin:0" data-skel-media>
+      <img src="https://picsum.photos/seed/speicher/1600/700" alt="Umgebauter Backsteinspeicher am Wasser mit neuen Fensterbändern" loading="lazy" width="1600" height="700">
+      <span class="sticker" data-sticker="stamp" style="right:6%;top:-28px">Preis 2025</span>
+    </figure>
+    <figcaption class="small muted" style="margin-top:10px">Speicher Wallhalbinsel, 2024 – 3.200 m² Büro in einem Getreidespeicher von 1898.</figcaption>
+  </section>
+
+  <section class="wrap section" id="projekte">
+    <div class="grid12" style="align-items:end;margin-bottom:calc(var(--s)*4)">
+      <h2 style="grid-column:1/8">Ausgewählte Projekte</h2>
+      <a class="link" style="grid-column:10/13;justify-self:end" href="#">Alle 41 ansehen</a>
+    </div>
+    <ol class="ed-list">
+      <li data-reveal="up"><span class="label num">2024</span><h3>Speicher Wallhalbinsel</h3><p class="muted">Büros statt Getreide. Die Holzbalkendecken blieben, die Fassade bekam nur neue Öffnungen.</p></li>
+      <li data-reveal="up"><span class="label num">2023</span><h3>Grundschule Moisling</h3><p class="muted">Pavillonschule von 1962, energetisch saniert im laufenden Betrieb – drei Sommerferien, kein Ausfalltag.</p></li>
+      <li data-reveal="up"><span class="label num">2021</span><h3>Haus K., Travemünde</h3><p class="muted">Ein 50er-Jahre-Bungalow, aufgestockt in Holz. 94 m² mehr, Grundfläche unverändert.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap section hair" id="haltung">
+    <div class="grid12">
+      <p class="label" style="grid-column:1/4">Haltung</p>
+      <blockquote style="grid-column:4/12;margin:0" data-reveal>
+        <p class="display" style="font-size:var(--fs-h1)">„Das grünste Gebäude ist das, das schon da ist.“</p>
+        <footer class="small muted" style="margin-top:16px">Carl Elefante, AIA – unser Leitsatz seit dem ersten Projekt</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="wrap section" id="kontakt">
+    <div class="grid12">
+      <div style="grid-column:1/6" class="stack">
+        <h2>Ein Gebäude, das Sie nicht abreißen wollen?</h2>
+        <p class="muted">Schicken Sie uns Adresse und Baujahr. Wir melden uns innerhalb von drei Werktagen mit einer ersten Einschätzung – kostenlos.</p>
+      </div>
+      <form style="grid-column:7/13" class="stack" onsubmit="event.preventDefault()">
+        <div><label for="a">Adresse des Gebäudes</label><input id="a" autocomplete="street-address"></div>
+        <div><label for="j">Baujahr (ungefähr)</label><input id="j" inputmode="numeric"></div>
+        <div><label for="m">E-Mail</label><input id="m" type="email" autocomplete="email"></div>
+        <button class="btn" data-magnetic>Einschätzung anfragen →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot rule">
+  <div class="cols">
+    <p class="muted">Hollmann Architekten PartGmbB<br>An der Untertrave 41, 23552 Lübeck</p>
+    <div><p class="label">Büro</p><ul><li><a href="#">Team</a></li><li><a href="#">Jobs</a></li></ul></div>
+    <div><p class="label">Kontakt</p><ul><li><a href="mailto:post@example.de">post@example.de</a></li><li><a href="tel:+49451000000">0451 000 000</a></li></ul></div>
+    <div><p class="label">Rechtliches</p><ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li></ul></div>
+  </div>
+</footer>
+<script src="../motion/motion.js" defer></script>
+<script src="../skeletons/skeletons.js" defer></script>
+<script src="../stickers/stickers.js" defer></script>
+</body>
+</html>

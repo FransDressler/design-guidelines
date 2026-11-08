@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de" data-palette="crumbz" data-type="friendly" data-radius="pill" data-density="regular" data-motion="lively" data-skeleton="blur" data-stickers="badge" data-grain="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Krümel & Co. – Cookies aus Lübeck, bis 18 Uhr bestellt, morgen warm</title>
+<meta name="description" content="Sechs Sorten, jeden Morgen frisch gebacken. Abholung ab 7 Uhr in der Hüxstraße oder Lieferung in Lübeck ab 12 Stück.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/layouts/shop.html">
+<meta property="og:title" content="Krümel & Co. – Cookies aus Lübeck">
+<meta property="og:description" content="Bis 18 Uhr bestellt, morgen um 7 warm abholen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fransdressler.github.io/design-guidelines/layouts/shop.html">
+<meta property="og:image" content="https://picsum.photos/seed/cookie/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../tokens/base.css">
+<link rel="stylesheet" href="layouts.css">
+<link rel="stylesheet" href="../motion/motion.css">
+<link rel="stylesheet" href="../skeletons/skeletons.css">
+<link rel="stylesheet" href="../stickers/stickers.css">
+<script src="../tokens/fonts.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Krümel & Co.","address":{"@type":"PostalAddress","streetAddress":"Hüxstraße 1","addressLocality":"Lübeck","addressCountry":"DE"},"openingHours":"Mo-Sa 07:00-14:00"}</script>
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="#">Krümel&nbsp;&amp;&nbsp;Co.</a>
+  <nav aria-label="Hauptmenü"><a href="#sorten" aria-current="page">Sorten</a><a href="#abholen">Abholen</a><a href="#">Firmen</a></nav>
+  <a class="btn ghost" href="#">Warenkorb (0)</a>
+</header>
+<main>
+  <section class="wrap" style="padding-block:calc(var(--section)*.5)">
+    <div class="grid12" style="align-items:end">
+      <h1 style="grid-column:1/9" data-split>Bis 18&nbsp;Uhr bestellt, morgen um&nbsp;7 warm.</h1>
+      <p class="muted" style="grid-column:9/13" data-reveal>Wir backen nachts in der Hüxstraße. Was morgens nicht abgeholt ist, geht um 14 Uhr an die Tafel.</p>
+    </div>
+  </section>
+
+  <section class="wrap" id="sorten" aria-label="Sorten">
+    <div class="shop-grid">
+      <a class="prod big" href="#" data-reveal="up">
+        <div class="media" data-skel-media><img src="https://picsum.photos/seed/c1/900/900" alt="Doppelschoko-Cookie, aufgebrochen" loading="lazy" width="900" height="900"><span class="sticker" data-sticker="badge" style="left:20px;top:20px">Bestseller</span></div>
+        <div class="row"><h2 style="font-size:var(--fs-h3)">Doppelschoko</h2><span class="num">2,90 €</span></div>
+        <p class="small muted">Belgische Zartbitter, 70 %, mit Fleur de Sel. 1.180 Stück letzte Woche.</p>
+      </a>
+      <a class="prod" href="#" data-reveal="up"><div class="media" data-skel-media><img src="https://picsum.photos/seed/c2/500/500" alt="Hafer-Rosinen-Cookie" loading="lazy" width="500" height="500"></div><div class="row"><h3>Hafer &amp; Rosine</h3><span class="num">2,40 €</span></div></a>
+      <a class="prod" href="#" data-reveal="up"><div class="media" data-skel-media><img src="https://picsum.photos/seed/c3/500/500" alt="Lebkuchen-Cookie mit Zuckerguss" loading="lazy" width="500" height="500"></div><div class="row"><h3>Lebkuchen</h3><span class="num">3,10 €</span></div></a>
+      <a class="prod" href="#" data-reveal="up"><div class="media" data-skel-media><img src="https://picsum.photos/seed/c4/500/500" alt="Erdnuss-Karamell-Cookie" loading="lazy" width="500" height="500"></div><div class="row"><h3>Erdnuss-Karamell</h3><span class="num">2,90 €</span></div></a>
+      <a class="prod" href="#" data-reveal="up"><div class="media" data-skel-media><img src="https://picsum.photos/seed/c5/500/500" alt="Veganer Tahini-Cookie" loading="lazy" width="500" height="500"></div><div class="row"><h3>Tahini (vegan)</h3><span class="num">2,90 €</span></div></a>
+      <a class="prod" href="#" data-reveal="up"><div class="media" data-skel-media><img src="https://picsum.photos/seed/c6/500/500" alt="Marzipan-Cookie" loading="lazy" width="500" height="500"></div><div class="row"><h3>Lübecker Marzipan</h3><span class="num">3,30 €</span></div></a>
+    </div>
+  </section>
+
+  <section class="wrap section" id="abholen">
+    <div class="grid12">
+      <h2 style="grid-column:1/6">Abholen oder liefern lassen</h2>
+      <dl style="grid-column:7/13;margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px">
+        <dt class="label">Abholung</dt><dd style="margin:0">Mo–Sa 7–14 Uhr, Hüxstraße 1</dd>
+        <dt class="label">Lieferung</dt><dd style="margin:0">Lübeck, ab 12 Stück, 3,50 €</dd>
+        <dt class="label">Firmen</dt><dd style="margin:0">Ab 50 Stück mit eigenem Logo – 5 Werktage Vorlauf</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer class="wrap foot hair"><div class="cols"><p class="muted">Krümel &amp; Co. · Hüxstraße 1 · 23552 Lübeck</p><div><p class="label">Shop</p><ul><li><a href="#sorten">Sorten</a></li><li><a href="#">Gutscheine</a></li></ul></div><div><p class="label">Hilfe</p><ul><li><a href="#">Allergene</a></li><li><a href="#">Kontakt</a></li></ul></div><div><p class="label">Rechtliches</p><ul><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div></div></footer>
+<script src="../motion/motion.js" defer></script>
+<script src="../skeletons/skeletons.js" defer></script>
+<script src="../stickers/stickers.js" defer></script>
+</body>
+</html>

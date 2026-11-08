@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de" data-palette="skyline" data-type="technical" data-radius="soft" data-density="regular" data-motion="lively" data-skeleton="scan" data-stickers="badge" data-grain="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leihbar – Werkzeug von Nachbarn leihen statt kaufen</title>
+<meta name="description" content="Bohrmaschine für 4 € am Tag statt 120 € im Baumarkt. 2.300 Geräte in Lübeck und Kiel, versichert bis 1.000 € pro Ausleihe.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/layouts/split.html">
+<meta property="og:title" content="Leihbar – leihen statt kaufen">
+<meta property="og:description" content="2.300 Geräte von Nachbarn, versichert bis 1.000 €.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fransdressler.github.io/design-guidelines/layouts/split.html">
+<meta property="og:image" content="https://picsum.photos/seed/leihbar/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../tokens/base.css">
+<link rel="stylesheet" href="layouts.css">
+<link rel="stylesheet" href="../motion/motion.css">
+<link rel="stylesheet" href="../skeletons/skeletons.css">
+<link rel="stylesheet" href="../stickers/stickers.css">
+<script src="../tokens/fonts.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Leihbar","url":"https://fransdressler.github.io/design-guidelines/layouts/split.html","areaServed":["Lübeck","Kiel"]}</script>
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="#">leihbar</a>
+  <nav aria-label="Hauptmenü"><a href="#so">So geht's</a><a href="#preise">Preise</a><a href="#faq">Fragen</a></nav>
+  <a class="btn" href="#start">Gerät finden</a>
+</header>
+
+<main class="wrap split">
+  <div class="pin stack">
+    <p class="label">Lübeck · Kiel · 2.300 Geräte</p>
+    <h1 data-split>Die Bohrmaschine hängt schon bei deinem Nachbarn.</h1>
+    <p class="lead muted">Ein Bohrer wird im Leben durchschnittlich 13 Minuten benutzt. Leih ihn für 4 € am Tag – versichert, mit Abholung um die Ecke.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+      <a class="btn" id="start" href="#" data-magnetic>Gerät in der Nähe finden</a>
+      <a class="link" href="#verleihen">Eigenes Werkzeug verleihen</a>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div id="so" data-reveal="up">
+      <figure class="media" style="margin:0" data-skel-media><img src="https://picsum.photos/seed/drill/900/675" alt="Akkubohrer auf einer Werkbank" loading="lazy" width="900" height="675">
+        <span class="sticker" data-sticker="badge" style="left:-14px;top:18px">4 €/Tag</span></figure>
+      <h2 style="margin-top:24px;font-size:var(--fs-h3)">1 · Suchen</h2>
+      <p class="muted">Gib ein, was du brauchst. Wir zeigen nur Geräte, die zu Fuß oder mit dem Rad erreichbar sind – im Schnitt 600 m entfernt.</p>
+    </div>
+    <div data-reveal="up">
+      <h2 style="font-size:var(--fs-h3)">2 · Abholen</h2>
+      <p class="muted">Termin im Chat ausmachen, Gerät abholen, Zustand mit zwei Fotos in der App bestätigen. Fertig.</p>
+    </div>
+    <div data-reveal="up">
+      <h2 style="font-size:var(--fs-h3)">3 · Zurückgeben</h2>
+      <p class="muted">Kaputt gegangen? Bis 1.000 € übernimmt die Versicherung, ohne Selbstbeteiligung. Ist bisher 31-mal passiert.</p>
+    </div>
+    <div id="preise" data-reveal="up">
+      <h2 style="font-size:var(--fs-h3)">Was es kostet</h2>
+      <table style="width:100%;border-collapse:collapse;margin-top:12px" class="num">
+        <thead><tr><th class="label" style="text-align:left;padding:8px 0">Gerät</th><th class="label" style="text-align:right">Tag</th><th class="label" style="text-align:right">Neu im Laden</th></tr></thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--line)"><td style="padding:12px 0">Akkubohrer</td><td style="text-align:right">4 €</td><td style="text-align:right" class="muted">120 €</td></tr>
+          <tr style="border-top:1px solid var(--line)"><td style="padding:12px 0">Hochdruckreiniger</td><td style="text-align:right">9 €</td><td style="text-align:right" class="muted">230 €</td></tr>
+          <tr style="border-top:1px solid var(--line)"><td style="padding:12px 0">Lastenrad</td><td style="text-align:right">15 €</td><td style="text-align:right" class="muted">3.400 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="faq" data-reveal="up">
+      <h2 style="font-size:var(--fs-h3)">Häufige Fragen</h2>
+      <details style="border-top:1px solid var(--line);padding:14px 0"><summary style="cursor:pointer;min-height:24px">Was, wenn das Gerät nicht funktioniert?</summary><p class="muted" style="margin-top:8px">Du zahlst nichts, und wir suchen dir ein anderes in der Nähe.</p></details>
+      <details style="border-top:1px solid var(--line);padding:14px 0"><summary style="cursor:pointer">Wie verdiene ich mit meinem Werkzeug?</summary><p class="muted" style="margin-top:8px">Du bekommst 80 % des Mietpreises. Verleiher in Lübeck verdienen im Schnitt 38 € im Monat.</p></details>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap foot hair">
+  <div class="cols">
+    <p class="muted">Leihbar UG · Lübeck</p>
+    <div><p class="label">Produkt</p><ul><li><a href="#">Geräte</a></li><li><a href="#verleihen">Verleihen</a></li></ul></div>
+    <div><p class="label">Hilfe</p><ul><li><a href="#faq">Fragen</a></li><li><a href="#">Versicherung</a></li></ul></div>
+    <div><p class="label">Rechtliches</p><ul><li><a href="#">Impressum</a></li><li><a href="#">AGB</a></li></ul></div>
+  </div>
+</footer>
+<script src="../motion/motion.js" defer></script>
+<script src="../skeletons/skeletons.js" defer></script>
+<script src="../stickers/stickers.js" defer></script>
+</body>
+</html>

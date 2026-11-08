@@ -56,7 +56,7 @@ Workflow-Video (eher Freelance-Business):
 
 ### Userfacet — „How Senior Designers Wireframe“ — https://youtu.be/66m1adPbHJk
 - Mehrere Iterationen der **Kernseiten** (die 80 % der Zeit genutzt werden) zuerst.
-- **Kein Lorem Ipsum** — echter Inhalt ist „50 % des Designs“; Fake-Text verdeckt Layoutprobleme.
+- **Kein Lorem Ipsum** — echter Inhalt ist „50 % des Designs“; Fake-Text verdeckt Layoutprobleme. <!-- lint-ok -->
 - Eher High-Fidelity-Wireframes, Interaktionen (Scroll, Animation, Popups) dokumentieren.
 - Informationsarchitektur priorisieren, bevor es hübsch wird.
 

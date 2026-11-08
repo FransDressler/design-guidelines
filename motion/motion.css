@@ -1,0 +1,49 @@
+/* Motion. Intensity from <html data-motion="calm|lively|bold">. Content is only hidden once motion.js runs (.motion-ready). */
+:root{--m-dist:14px;--m-dur:.7s;--m-ease:cubic-bezier(.2,.7,.1,1);--m-stagger:40ms}
+[data-motion="calm"]{--m-dist:8px;--m-dur:.9s;--m-stagger:25ms}
+[data-motion="lively"]{--m-dist:24px;--m-dur:.75s;--m-stagger:45ms}
+[data-motion="bold"]{--m-dist:60px;--m-dur:.9s;--m-ease:cubic-bezier(.7,0,.2,1);--m-stagger:60ms}
+
+/* reveal */
+.motion-ready [data-reveal]{transition:opacity var(--m-dur) var(--m-ease),transform var(--m-dur) var(--m-ease),clip-path var(--m-dur) var(--m-ease);transition-delay:var(--d,0ms)}
+.motion-ready [data-reveal]:not(.in){opacity:0}
+.motion-ready [data-reveal="up"]:not(.in){transform:translateY(var(--m-dist))}
+.motion-ready [data-reveal="left"]:not(.in){transform:translateX(calc(var(--m-dist) * -1))}
+.motion-ready [data-reveal="clip"]:not(.in){opacity:1;clip-path:inset(0 0 100% 0)}
+.motion-ready [data-reveal="scale"]:not(.in){transform:scale(.94)}
+
+/* split text: words or chars rise from a mask */
+.split-w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.split-w>span{display:inline-block;transition:transform var(--m-dur) var(--m-ease),opacity var(--m-dur);transition-delay:calc(var(--i) * var(--m-stagger))}
+.motion-ready [data-split]:not(.in) .split-w>span{transform:translateY(105%);opacity:0}
+
+/* marquee */
+[data-marquee]{overflow:hidden;white-space:nowrap;display:flex;max-width:100%}
+[data-marquee]>span{flex:none;padding-right:.5em;animation:mq var(--mq,28s) linear infinite}
+[data-marquee="fast"]{--mq:14s}
+[data-marquee]:hover>span{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-100%)}}
+
+/* magnetic buttons + hover preview */
+[data-magnetic]{transition:transform .25s var(--m-ease)}
+.hover-preview{position:fixed;left:0;top:0;width:240px;aspect-ratio:16/10;object-fit:cover;pointer-events:none;z-index:50;border-radius:var(--r);opacity:0;transform:translate(-50%,-50%) scale(.9);transition:opacity .2s,transform .2s}
+.hover-preview.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-2deg)}
+
+/* underline that draws in */
+.draw{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--m-ease);text-decoration:none}
+.draw:hover{background-size:100% 1.5px}
+
+/* page transitions (same-origin navigations, View Transitions API) */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:.25s ease-in both vt-out}
+::view-transition-new(root){animation:.35s var(--m-ease) both vt-in}
+@keyframes vt-out{to{opacity:0;transform:translateY(-8px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(12px)}}
+
+@media (prefers-reduced-motion:reduce){
+  .motion-ready [data-reveal]:not(.in),.motion-ready [data-split]:not(.in) .split-w>span{opacity:1;transform:none;clip-path:none}
+  [data-marquee]>span{animation:none}
+  [data-marquee]{white-space:normal}
+  ::view-transition-old(root),::view-transition-new(root){animation:none}
+}
+@media (hover:none){.hover-preview{display:none}}

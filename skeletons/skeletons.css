@@ -1,0 +1,42 @@
+/* Skeletons. Mode from <html data-skeleton> or per element: data-skel-media="pixel|scan|blur|type" */
+[data-skel-media]{position:relative;background:var(--surface);isolation:isolate}
+[data-skel-media]>img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .2s}
+[data-skel-media].skel-done>img{opacity:1}
+.skel-canvas{position:absolute;inset:0;border-radius:var(--r);width:100%;height:100%;z-index:1;pointer-events:none;image-rendering:pixelated}
+
+/* scan: a light bar sweeps while loading, reveal top → bottom */
+[data-skel-mode="scan"]::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 0 45%,color-mix(in srgb,var(--ink) 12%,transparent) 50%,transparent 55% 100%);background-size:100% 220%;animation:skel-scan 1.4s linear infinite}
+[data-skel-mode="scan"].skel-done::after{display:none}
+[data-skel-mode="scan"].skel-done>img{animation:skel-wipe .7s cubic-bezier(.7,0,.2,1) both}
+@keyframes skel-scan{from{background-position:0 120%}to{background-position:0 -120%}}
+@keyframes skel-wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+
+/* blur: soft breathing surface, then blur-up */
+[data-skel-mode="blur"]:not(.skel-done){animation:skel-breathe 1.6s ease-in-out infinite}
+[data-skel-mode="blur"].skel-done>img{animation:skel-blur .9s ease-out both}
+@keyframes skel-breathe{50%{background:color-mix(in srgb,var(--surface) 70%,var(--line))}}
+@keyframes skel-blur{from{filter:blur(24px) saturate(.4);clip-path:inset(0 round var(--r))}to{filter:none;clip-path:inset(0 round var(--r))}}
+
+/* type: media shows a blinking cursor + file name like a terminal loading */
+[data-skel-mode="type"]::before{content:attr(data-skel-label);position:absolute;left:16px;bottom:14px;z-index:1;font:500 var(--fs-micro) var(--font-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+[data-skel-mode="type"]:not(.skel-done)::after{content:"";position:absolute;left:16px;bottom:30px;width:.6em;height:1.1em;background:var(--accent);z-index:1;animation:skel-blink .8s steps(1) infinite}
+[data-skel-mode="type"].skel-done::before{display:none}
+[data-skel-mode="type"].skel-done>img{animation:skel-steps .6s steps(6) both}
+@keyframes skel-blink{50%{opacity:0}}
+@keyframes skel-steps{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+
+/* Text/content skeleton blocks: <div class="skel" data-skel-text>…real content…</div> */
+.skel-line{display:block;height:.8em;margin:.45em 0;border-radius:var(--r);background:var(--surface)}
+.skel-line.w60{width:60%}.skel-line.w80{width:80%}.skel-line.w40{width:40%}
+[data-skel-text]:not(.skel-done)>:not(.skel-lines){display:none}
+[data-skel-text].skel-done>.skel-lines{display:none}
+[data-skel-text]:not(.skel-done) .skel-line{background:linear-gradient(90deg,var(--surface) 0 40%,color-mix(in srgb,var(--surface) 60%,var(--line)) 50%,var(--surface) 60%);background-size:300% 100%;animation:skel-sheen 1.3s linear infinite}
+[data-skel-text].skel-done>:not(.skel-lines){animation:skel-in .4s ease-out both}
+@keyframes skel-sheen{from{background-position:100% 0}to{background-position:-100% 0}}
+@keyframes skel-in{from{opacity:0;transform:translateY(4px)}}
+
+@media (prefers-reduced-motion:reduce){
+  [data-skel-media] *,[data-skel-media]::before,[data-skel-media]::after,[data-skel-text] *{animation:none!important}
+  [data-skel-media]::after{display:none}
+  .skel-canvas{display:none}
+}

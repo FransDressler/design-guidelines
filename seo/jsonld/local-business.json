@@ -1,0 +1,1 @@
+{"@context":"https://schema.org","@type":"{{LocalBusiness|Bakery|Restaurant|ProfessionalService}}","name":"{{Name}}","address":{"@type":"PostalAddress","streetAddress":"{{Straße 1}}","postalCode":"{{23552}}","addressLocality":"{{Lübeck}}","addressCountry":"DE"},"telephone":"{{+49…}}","openingHours":"{{Mo-Sa 07:00-14:00}}","url":"{{https://domain.de}}"}

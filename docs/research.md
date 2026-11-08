@@ -23,7 +23,7 @@ LLMs geben den statistischen Mittelwert ihrer Trainingsdaten aus. Seit 2023 best
 - Badge-Pill über der H1 („✨ New: AI-powered …“).
 
 ### Text
-- „Unlock / Supercharge / Elevate / Seamless / Effortless / Revolutionize your workflow“.
+- „Unlock / Supercharge / Elevate / Seamless / Effortless / Revolutionize your workflow“. <!-- lint-ok -->
 - Dreierlisten überall, Gedankenstriche, „Built for X. Designed for Y.“
 - Erfundene Kennzahlen („10,000+ teams“, „99.9 % uptime“) und Testimonials von „Sarah J., CEO“.
 - Emojis als Icons (🚀 ⚡ ✨), Lucide-Icons ohne Bezug zum Inhalt.

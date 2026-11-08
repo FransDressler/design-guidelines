@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fransdressler.github.io/design-guidelines/</loc></url>
-  <url><loc>https://fransdressler.github.io/design-guidelines/components.html</loc></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/components.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/generator.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/layouts/editorial.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/layouts/manifesto.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/layouts/portfolio.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/layouts/poster.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/layouts/shop.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/layouts/split.html</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/motion/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://fransdressler.github.io/design-guidelines/skeletons/</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://fransdressler.github.io/design-guidelines/lab/</loc></url>
 </urlset>

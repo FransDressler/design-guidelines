@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de" data-palette="voltage" data-type="technical" data-radius="crisp" data-density="compact">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skeletons – Pixel-Dissolve, Scan, Blur-up, Typewriter</title>
+<meta name="description" content="Vier Lade-Skeletons für Bilder und Text: Pixel-Dissolve, Scanline, Blur-up und Typewriter, mit Fallback für reduzierte Bewegung.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/skeletons/">
+<meta property="og:title" content="Skeletons – Blank Library"><meta property="og:description" content="Pixel-Dissolve, Scan, Blur-up, Typewriter."><meta property="og:type" content="website"><meta property="og:url" content="https://fransdressler.github.io/design-guidelines/skeletons/"><meta property="og:image" content="https://picsum.photos/seed/skel/1200/630"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tokens/tokens.css"><link rel="stylesheet" href="../tokens/base.css"><link rel="stylesheet" href="../skeletons/skeletons.css">
+<script src="../tokens/fonts.js"></script>
+<style>.demo{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.demo figure{margin:0;aspect-ratio:4/3}.demo .cap{display:flex;justify-content:space-between;margin-top:8px}@media(max-width:760px){.demo{grid-template-columns:1fr}}</style>
+</head>
+<body>
+<main class="wrap section stack">
+  <p class="label"><a href="../">Blank</a> / Skeletons</p>
+  <h1>Skeletons, die selbst etwas zeigen.</h1>
+  <p class="lead muted">Jeder Kasten wartet 1,5 s, als würde das Bild langsam laden. Dann blendet er auf seine Art ein.</p>
+  <button class="btn" onclick="location.reload()">Noch mal abspielen</button>
+
+  <div class="demo">
+    <div><figure data-skel-media="pixel" data-skel-wait="1500"><img src="https://picsum.photos/seed/px1/900/675" alt="Pixel-Dissolve-Beispiel: Küstenlandschaft" width="900" height="675"></figure><p class="cap"><b>pixel</b><code class="small muted">data-skel-media="pixel"</code></p></div>
+    <div><figure data-skel-media="scan" data-skel-wait="1500"><img src="https://picsum.photos/seed/px2/900/675" alt="Scanline-Beispiel: Stadt bei Nacht" width="900" height="675"></figure><p class="cap"><b>scan</b><code class="small muted">data-skel-media="scan"</code></p></div>
+    <div><figure data-skel-media="blur" data-skel-wait="1500"><img src="https://picsum.photos/seed/px3/900/675" alt="Blur-up-Beispiel: Wald" width="900" height="675"></figure><p class="cap"><b>blur</b><code class="small muted">data-skel-media="blur"</code></p></div>
+    <div><figure data-skel-media="type" data-skel-wait="1500"><img src="https://picsum.photos/seed/px4/900/675" alt="Typewriter-Beispiel: Werkstatt" width="900" height="675"></figure><p class="cap"><b>type</b><code class="small muted">data-skel-media="type"</code></p></div>
+  </div>
+
+  <h2>Text-Skeleton</h2>
+  <div data-skel-text data-skel-wait="1800" style="max-width:52ch">
+    <div class="skel-lines"><i class="skel-line w60"></i><i class="skel-line"></i><i class="skel-line w80"></i></div>
+    <h3>Bestellung #4182</h3>
+    <p class="muted">12 × Doppelschoko, Abholung morgen 7:15 Uhr, Hüxstraße 1. Bezahlt per PayPal.</p>
+  </div>
+</main>
+<script src="../skeletons/skeletons.js" defer></script>
+</body>
+</html>

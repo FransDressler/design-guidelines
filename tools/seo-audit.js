@@ -28,6 +28,8 @@ const CHROME = require('os').homedir() + '/.cache/ms-playwright/chromium-1252/ch
       vagueLinks: [...document.querySelectorAll('a')].map(a => a.innerText.trim().toLowerCase()).filter(t => ['hier', 'mehr', 'click here', 'here', 'more', 'learn more'].includes(t)).length,
       words: document.body.innerText.split(/\s+/).filter(Boolean).length,
       jsonld: document.querySelectorAll('script[type="application/ld+json"]').length,
+      jsonldCheck: [...document.querySelectorAll('script[type="application/ld+json"]')].map(s => { try { const j = JSON.parse(s.textContent); const items = [].concat(j['@graph'] || j); return items.map(i => !i['@type'] ? 'ohne @type' : /\{\{/.test(JSON.stringify(i)) ? i['@type'] + ': Platzhalter {{…}} übrig' : 'ok:' + i['@type']).join(','); } catch (e) { return 'kaputt: ' + e.message.slice(0, 60); } }),
+      ogImage: document.querySelector('meta[property="og:image"]')?.content || '',
     };
   });
   const origin = new URL(url).origin;
@@ -54,7 +56,9 @@ const CHROME = require('os').homedir() + '/.cache/ms-playwright/chromium-1252/ch
   add(d.twitter ? 'ok' : 'warn', 'twitter-card', d.twitter || 'fehlt');
   add(d.emptyLinks ? 'warn' : 'ok', 'link-text', `${d.emptyLinks} leere, ${d.vagueLinks} vage Linktexte`);
   add(d.words < 200 ? 'warn' : 'ok', 'content', `${d.words} Wörter`);
-  add(d.jsonld ? 'ok' : 'warn', 'structured-data', d.jsonld ? `${d.jsonld} JSON-LD-Block(e)` : 'kein JSON-LD');
+  const bad = d.jsonldCheck.filter(x => !/^ok:/.test(x.split(',').find(y => !y.startsWith('ok:')) ?? 'ok:'));
+  add(!d.jsonld ? 'warn' : bad.length ? 'fail' : 'ok', 'structured-data', !d.jsonld ? 'kein JSON-LD (Vorlagen: seo/jsonld/)' : bad.length ? bad.join('; ') : d.jsonldCheck.join(', ').replace(/ok:/g, ''));
+  if (d.ogImage) { try { const r = await fetch(new URL(d.ogImage, url), { headers: { Range: 'bytes=0-0' }, redirect: 'follow' }); add(r.ok ? 'ok' : 'fail', 'og:image', `${r.status} ${d.ogImage.slice(0, 60)}`); } catch { add('fail', 'og:image', 'nicht erreichbar'); } }
   add(robotsTxt === 200 ? 'ok' : 'warn', 'robots.txt', `${origin}/robots.txt → ${robotsTxt}`);
   add(sitemap === 200 ? 'ok' : 'warn', 'sitemap.xml', `${origin}/sitemap.xml → ${sitemap}`);
 

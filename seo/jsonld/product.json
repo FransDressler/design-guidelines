@@ -1,0 +1,1 @@
+{"@context":"https://schema.org","@type":"Product","name":"{{Produkt}}","image":["{{https://…/bild.jpg}}"],"description":"{{ein Satz}}","brand":{"@type":"Brand","name":"{{Marke}}"},"offers":{"@type":"Offer","price":"{{149.00}}","priceCurrency":"EUR","availability":"https://schema.org/InStock"}}

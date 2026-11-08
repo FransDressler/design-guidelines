@@ -56,7 +56,7 @@ Gleiche Komponenten (Button, Card, Input, Label, Badge, Table), links Default, r
 | Card mit Rahmen, Radius, Footer-Fläche | keine Card: 2px-Linie oben + Textblock |
 | Badge „✨ Neu“ | Mono-Microcopy 11 px uppercase („Vorbestellung · Woche 46“) |
 | Titel 16 px, Text 14 px (Ratio ~1,1) | Display 44 px / −3 % Tracking, Text 15 px (Ratio ~2,9) |
-| „Get Started“ + Outline „Learn More“ | konkreter CTA „Platz reservieren“ + Textlink als Zweitaktion |
+| „Get Started“ + Outline „Learn More“ | konkreter CTA „Platz reservieren“ + Textlink als Zweitaktion | <!-- lint-ok -->
 | Input mit Rahmen | Unterstrich-Input, Label sagt wofür |
 | Zahlen linksbündig, Status als Pill-Badges | Zahlen rechts, `tabular-nums`, 1.180 statt 1180; Status als Punkt + Text, „Ausverkauft“ durchgestrichen |
 | Geist + neutral grau | Bricolage Grotesque + JetBrains Mono, Palette Crumbz / Zyorex / Pelmatech, Radius je Marke (0.9rem / 2px / 6px) |

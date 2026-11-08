@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fransdressler.github.io/design-guidelines/sitemap.xml

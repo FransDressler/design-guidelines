@@ -3,7 +3,16 @@
 ```bash
 node tools/seo-audit.js <url>               # On-Page-Checks, Exit 1 bei Fehlern
 node tools/seo-audit.js <url> --lighthouse  # zusätzlich Lighthouse-SEO-Score
+node tools/meta.js --title "…" --desc "…" --url "…" [--image …] [--jsonld local-business]   # fertiger <head>-Block + Warnungen
+node tools/sitemap.js https://domain.de/ [ordner]                                          # sitemap.xml aus allen .html (noindex wird übersprungen)
 ```
+
+Bausteine:
+- `seo/head.html`: Grundausstattung mit Platzhaltern
+- `seo/jsonld/`: Vorlagen für organization, local-business, event, product, person, article, faq, breadcrumb. Das Audit meldet einen **Fehler**, wenn `{{…}}`-Platzhalter stehen geblieben sind oder das JSON kaputt ist.
+- `robots.txt`: verweist auf die Sitemap
+
+Schreibregeln für Title und Description: Was es ist, für wen oder wo, und eine Zahl (Preis, Menge, Jahr, Ort). `tools/meta.js` warnt bei Floskeln und wenn keine Zahl vorkommt.
 
 | Check | Ziel | Warum |
 |---|---|---|

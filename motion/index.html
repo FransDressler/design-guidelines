@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de" data-palette="avalon" data-type="grotesk" data-radius="soft" data-density="regular" data-motion="lively">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion – Reveal, Text-Split, Marquee, Magnet-Buttons</title>
+<meta name="description" content="Kleine Animationsbausteine ohne Framework: Scroll-Reveal, Text-Split, Marquee, magnetische Buttons, Hover-Vorschau, Zähler und Seitenwechsel.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/motion/">
+<meta property="og:title" content="Motion – Blank Library"><meta property="og:description" content="Animationsbausteine ohne Framework."><meta property="og:type" content="website"><meta property="og:url" content="https://fransdressler.github.io/design-guidelines/motion/"><meta property="og:image" content="https://picsum.photos/seed/motion/1200/630"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tokens/tokens.css"><link rel="stylesheet" href="../tokens/base.css"><link rel="stylesheet" href="../motion/motion.css">
+<script src="../tokens/fonts.js"></script>
+<style>.box{padding:28px;border:1px solid var(--line);border-radius:var(--r)}.row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}@media(max-width:760px){.row{grid-template-columns:1fr 1fr}}</style>
+</head>
+<body>
+<main class="wrap section stack">
+  <p class="label"><a href="../">Blank</a> / Motion</p>
+  <h1 data-split>Bewegung, die etwas erklärt – nicht nur&nbsp;wackelt.</h1>
+  <p class="lead muted" data-reveal="up">Stärke umschalten: <button class="chip" onclick="document.documentElement.dataset.motion='calm';location.hash='calm';location.reload()">calm</button> <button class="chip" onclick="document.documentElement.dataset.motion='lively'">lively</button> <button class="chip" onclick="location.hash='bold';location.reload()">bold</button></p>
+
+  <h2 style="margin-top:80px">data-reveal</h2>
+  <div class="row">
+    <div class="box" data-reveal="up"><b>up</b><p class="small muted">Standard für Karten und Listen</p></div>
+    <div class="box" data-reveal="left"><b>left</b><p class="small muted">Für Abfolgen, Schritte</p></div>
+    <div class="box" data-reveal="clip"><b>clip</b><p class="small muted">Für Bilder, Überschriften</p></div>
+    <div class="box" data-reveal="scale"><b>scale</b><p class="small muted">Sparsam, für einzelne Zahlen</p></div>
+  </div>
+
+  <h2 style="margin-top:80px" data-split="chars">data-split="chars"</h2>
+
+  <div class="marquee" data-marquee style="font:var(--display-weight) var(--fs-h2)/1.1 var(--font-display);margin-top:60px"><span>data-marquee · läuft endlos · pausiert bei Hover · </span></div>
+
+  <h2 style="margin-top:80px">data-magnetic · data-count · .draw</h2>
+  <p><a class="btn" href="#" data-magnetic>Magnetischer Button</a> &nbsp; <a class="draw" href="#">Linie zeichnet sich ein</a></p>
+  <p class="display"><span data-count="2400">2400</span> <span class="label">Startplätze</span></p>
+</main>
+<script>if(location.hash)document.documentElement.dataset.motion=location.hash.slice(1)</script>
+<script src="../motion/motion.js" defer></script>
+</body>
+</html>

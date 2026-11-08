@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de" data-palette="zyorex" data-type="poster" data-radius="sharp" data-density="compact" data-motion="bold" data-skeleton="pixel" data-stickers="scribble" data-grain="on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hafenlauf Kiel 2027 – 10 km durch den Nordhafen, 6. Juni</title>
+<meta name="description" content="10 km über Werftgelände und Kaimauern, Start 9:30 an der Hörn. 2.400 Startplätze, Anmeldung bis 15. Mai, 29 € Startgeld.">
+<link rel="canonical" href="https://fransdressler.github.io/design-guidelines/layouts/poster.html">
+<meta property="og:title" content="Hafenlauf Kiel 2027">
+<meta property="og:description" content="10 km durch den Nordhafen, 6. Juni 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fransdressler.github.io/design-guidelines/layouts/poster.html">
+<meta property="og:image" content="https://picsum.photos/seed/hafen/1200/630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../tokens/base.css">
+<link rel="stylesheet" href="layouts.css">
+<link rel="stylesheet" href="../motion/motion.css">
+<link rel="stylesheet" href="../skeletons/skeletons.css">
+<link rel="stylesheet" href="../stickers/stickers.css">
+<script src="../tokens/fonts.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsEvent","name":"Hafenlauf Kiel 2027","startDate":"2027-06-06T09:30:00+02:00","location":{"@type":"Place","name":"Hörn, Kiel","address":"Kiel, DE"},"offers":{"@type":"Offer","price":"29","priceCurrency":"EUR"}}</script>
+</head>
+<body>
+<main>
+  <section class="wrap poster">
+    <header class="top" style="padding:0"><a class="brand" href="#">Hafenlauf</a><a class="btn" href="#anmelden" data-magnetic>Startplatz sichern</a></header>
+    <div style="position:relative">
+      <p class="label" style="margin-bottom:20px">Kiel · Sonntag, 6. Juni 2027 · 9:30</p>
+      <h1 class="display" data-split="chars" style="font-size:clamp(88px,24vw,360px)">10 km<br>Nord&shy;hafen</h1>
+      <span class="sticker" data-sticker="scribble" style="right:4%;bottom:12%">nur 2.400 Plätze!</span>
+    </div>
+    <div class="strip">
+      <div><p class="label">Start</p><p>Hörn, Kiel</p></div>
+      <div><p class="label">Strecke</p><p>Werft, Kai, Schleuse</p></div>
+      <div><p class="label">Startgeld</p><p class="num">29 €</p></div>
+      <div><p class="label">Anmeldeschluss</p><p class="num">15. Mai</p></div>
+    </div>
+  </section>
+
+  <section class="marquee display" data-marquee="fast" style="font-size:var(--fs-h1);background:var(--accent);color:var(--accent-ink);padding-block:10px" aria-hidden="true"><span>Werftgelände · Kaimauer · Schleuse · Zieleinlauf Hörn · </span></section>
+
+  <section class="wrap section grid12">
+    <h2 style="grid-column:1/6">Einmal im Jahr öffnet die Werft das Tor.</h2>
+    <div style="grid-column:7/13" class="stack">
+      <p class="lead">Die Strecke führt 3,2 km über Gelände, das sonst gesperrt ist – an Trockendock und Kränen vorbei.</p>
+      <p class="muted">Zeitmessung per Chip, Zielverpflegung von der Fischhalle, Duschen in der Werfthalle. Der Erlös geht an den Seenotrettungs-Nachwuchs.</p>
+    </div>
+  </section>
+
+  <section class="wrap section rule" id="anmelden">
+    <div class="grid12" style="align-items:end">
+      <h2 style="grid-column:1/8">Noch <span class="num" style="color:var(--accent)" data-count="812">812</span> Plätze frei.</h2>
+      <div style="grid-column:9/13"><a class="btn" style="width:100%;justify-content:center" href="#" data-magnetic>Jetzt anmelden – 29 €</a></div>
+    </div>
+  </section>
+</main>
+<footer class="wrap foot hair"><div class="cols"><p class="muted">Kieler Laufverein e. V.</p><div><p class="label">Lauf</p><ul><li><a href="#">Strecke</a></li><li><a href="#">Ergebnisse 2026</a></li></ul></div><div><p class="label">Kontakt</p><ul><li><a href="mailto:lauf@example.de">E-Mail</a></li></ul></div><div><p class="label">Rechtliches</p><ul><li><a href="#">Impressum</a></li></ul></div></div></footer>
+<script src="../motion/motion.js" defer></script>
+<script src="../skeletons/skeletons.js" defer></script>
+<script src="../stickers/stickers.js" defer></script>
+</body>
+</html>

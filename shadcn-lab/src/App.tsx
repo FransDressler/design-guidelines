@@ -19,15 +19,15 @@ function Stock() {
         <CardHeader>
           <Badge variant="secondary" className="w-fit">✨ Neu</Badge>
           <CardTitle>Vorbestellung starten</CardTitle>
-          <CardDescription>Seamlessly manage your cookie orders with our powerful platform.</CardDescription>
+          <CardDescription>Seamlessly manage your cookie orders with our powerful platform.</CardDescription>{/* lint-ok: A ist absichtlich generisch */}
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
           <Label htmlFor="e1">E-Mail</Label>
           <Input id="e1" placeholder="name@example.com" />
         </CardContent>
         <CardFooter className="flex flex-wrap gap-2">
-          <Button>Get Started</Button>
-          <Button variant="outline">Learn More</Button>
+          <Button>Get Started</Button>{/* lint-ok */}
+          <Button variant="outline">Learn More</Button>{/* lint-ok */}
         </CardFooter>
       </Card>
       <Card>

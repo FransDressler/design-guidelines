@@ -1,0 +1,39 @@
+/* Stickers & grain. Variant per element (data-sticker="stamp|tape|badge|scribble") or page default <html data-stickers>.
+   data-stickers="none" hides all. Parent needs position:relative (.media has it). */
+.sticker{position:absolute;z-index:3;display:inline-grid;place-items:center;pointer-events:auto;transform:rotate(var(--rot,-6deg));transition:transform .3s cubic-bezier(.3,1.6,.5,1);white-space:nowrap;user-select:none}
+.sticker:hover{transform:rotate(calc(var(--rot,-6deg) * -1)) scale(1.06)}
+[data-stickers="none"] .sticker{display:none}
+
+/* stamp: double ring, ink-coloured, slightly transparent like a rubber stamp */
+.sticker[data-v="stamp"]{width:112px;height:112px;border-radius:50%;padding:12px;text-align:center;white-space:normal;
+  font:700 12px/1.15 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);
+  border:2.5px solid currentColor;box-shadow:inset 0 0 0 5px var(--bg),inset 0 0 0 6.5px currentColor;background:color-mix(in srgb,var(--bg) 85%,transparent);mix-blend-mode:multiply}
+[data-palette] .sticker[data-v="stamp"]{mix-blend-mode:normal}
+
+/* tape: translucent strip with torn ends */
+.sticker[data-v="tape"]{padding:8px 22px;font:600 var(--fs-small)/1 var(--font-mono);color:var(--ink);
+  background:color-mix(in srgb,var(--pop) 75%,transparent);
+  clip-path:polygon(2% 0,98% 4%,100% 50%,97% 100%,3% 96%,0 50%)}
+
+/* badge: starburst in pop colour */
+.sticker[data-v="badge"]{width:96px;height:96px;padding:14px;text-align:center;white-space:normal;
+  font:800 14px/1.05 var(--font-display);text-transform:uppercase;color:var(--ink);background:var(--pop);
+  clip-path:polygon(50% 0,61% 13%,77% 6%,80% 22%,96% 24%,90% 39%,100% 50%,90% 61%,96% 76%,80% 78%,77% 94%,61% 87%,50% 100%,39% 87%,23% 94%,20% 78%,4% 76%,10% 61%,0 50%,10% 39%,4% 24%,20% 22%,23% 6%,39% 13%)}
+[data-palette="zyorex"] .sticker[data-v="badge"],[data-palette="paper"] .sticker[data-v="badge"],[data-palette="coral"] .sticker[data-v="badge"]{color:var(--bg)}
+
+/* scribble: handwritten note with a drawn arrow */
+.sticker[data-v="scribble"]{font:600 26px/1 "Caveat","Comic Sans MS",cursive;color:var(--accent);padding-bottom:30px}
+.sticker[data-v="scribble"]::after{content:"";position:absolute;left:10%;bottom:0;width:70px;height:30px;background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 30'%3E%3Cpath d='M66 4C50 20 26 26 6 22m0 0 9-8m-9 8 10 5' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 30'%3E%3Cpath d='M66 4C50 20 26 26 6 22m0 0 9-8m-9 8 10 5' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* grain overlay */
+[data-grain="on"] body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none;opacity:.07;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+[data-palette] body{position:relative}
+
+@media (max-width:760px){
+  .sticker{scale:.78;transform-origin:center}
+  .sticker[style*="right"]{right:8px!important}.sticker[style*="left"]{left:8px!important}
+}
+@media (prefers-reduced-motion:reduce){.sticker{transition:none}}
